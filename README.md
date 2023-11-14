@@ -40,9 +40,28 @@ popular JavaScript library called handlebar.js, which is used to
 dynamically populate HTML pages as they are rendered on the server. You 
 can learn about this syntax by reading the official handlebar.js 
 documentation [here](https://handlebarsjs.com/). In DIRRT, the most common 
-use of these bindings involves retrieving the primary key of a 
-table through the URL. This is done through Budibase's [URL 
+use of these of these bindings involves retrieving the primary key of a 
+table by through the url. This is done through Budibase's [URL 
 params](https://docs.budibase.com/docs/url-parameters) system. 
+
+Bindings essentially allow you to access objects and their respective properties. Consider the object below:
+```
+{ userId: 5, firstName: 'John', lastName: 'Doe' }
+```
+Here, there are two properties, `userId`, `firstName`, and `lastName`. Let's assume these properties are stored in the `Clicked Row` object, as would be the case if someone clicked on a table. To access the `userId` property, one could write something like this:
+```
+{{ Clicked Row.userId }}
+```
+Importantly, everything outside of the handlebars will be interpreted as *plain text*. So, if a developer wanted to navigate the user to a page to get details about a user's details, they could navigate the user to the following handlebar expression:
+```
+/user/{{ Clicked Row.userId }}
+```
+This assumes that there is a route matching the pattern above i.e. one that has a URL Parameter that accepts a user's id. This could then be accessed through the URL object through 
+```
+{{ URL.id }}
+```
+or a similar syntax, depending on the property name of the URL parameter.
+
 
 ## Incorporating JavaScript <a name="incorporating-js"></a>
 Another feature of Budibase is its ability to incorporate JavaScript to 
@@ -55,7 +74,7 @@ provider. Notably, the majority of the time--at least in my
 experience--SQL queries can replace the need for JavaScript. JavaScript 
 can also be handy when specifying 
 [actions](https://docs.budibase.com/docs/actions) in Budibase. Here, a dev 
-could create very custom behavior. The possibilities with JavaScript are 
+could create very custom behavior. The possibilties with JavaScript are 
 endless, and we would recommend playing around with it on Budibase to 
 understand its full range of capabilities.
 
@@ -104,3 +123,23 @@ University](https://www.youtube.com/watch?v=I2xvZPIv4IQ&list=PLEel-MMkFaJltK_jpK
 - Chad Detwiler, chad@disasterroad.org
 - Michael (Mike) Johnson, insitemotion@gmail.com
 - Caleb Briggs, caleb.briggs@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
