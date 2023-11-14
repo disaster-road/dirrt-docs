@@ -40,8 +40,8 @@ popular JavaScript library called handlebar.js, which is used to
 dynamically populate HTML pages as they are rendered on the server. You 
 can learn about this syntax by reading the official handlebar.js 
 documentation [here](https://handlebarsjs.com/). In DIRRT, the most common 
-use of these of these bindings involves retrieving the primary key of a 
-table by through the url. This is done through Budibase's [URL 
+use of these bindings involves retrieving the primary key of a 
+table through the URL. This is done through Budibase's [URL 
 params](https://docs.budibase.com/docs/url-parameters) system. 
 
 ## Incorporating JavaScript <a name="incorporating-js"></a>
@@ -55,9 +55,9 @@ provider. Notably, the majority of the time--at least in my
 experience--SQL queries can replace the need for JavaScript. JavaScript 
 can also be handy when specifying 
 [actions](https://docs.budibase.com/docs/actions) in Budibase. Here, a dev 
-could create very custom behavior. The possibilties with JavaScript are 
+could create very custom behavior. The possibilities with JavaScript are 
 endless, and we would recommend playing around with it on Budibase to 
-understand its full range of capabilties.
+understand its full range of capabilities.
 
 ## Regular Expression Validation <a name="regex-validation"></a>
 For more custom input validation, such as zip code or email validation. 
@@ -65,7 +65,7 @@ It's encouraged to incorporate [regular
 expressions](https://www.regular-expressions.info/#:~:text=A%20regular%20expression%20(regex%20or,files%20in%20a%20file%20manager.)), 
 commonly referred to as regex. Regex is essentially a way to express a 
 pattern in text. For instance, the `^` character represents the *start* of 
-text, a `$` represents the end of text and a `\d` character represents a 
+the text, a `$` represents the end of the text and a `\d` character represents a 
 digit. So, the regex `^\d$` would match something like `6` or `8`, but not 
 `74` or `spaghetti`. Atlassian--the company behind Trello--has some good 
 examples 
@@ -88,7 +88,7 @@ API](https://www.ibm.com/topics/rest-apis#:~:text=the%20next%20step-,What%20is%2
 Hypothetically, one could create a button or a CRON job to hit an 
 endpoint, query for relevant data, and email users within a certain role 
 outside of Budibase. Developing this within the confines of one 
-semester--assumming the reader is a student--is probably infeasible, but 
+semester--assuming the reader is a student--is probably infeasible, but 
 it's a possible solution one could find outside of Budibase's features.
 
 ## Additional Resources <a name="additional-resources"></a>
